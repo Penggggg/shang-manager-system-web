@@ -1,0 +1,31 @@
+
+@tips-invalid:  #a94442;
+@tips-valid: #42A948;
+
+.my-form {
+    padding: 15px;
+
+    .form-title {
+        text-align: center;
+    }
+
+    .form-tips {
+        text-align: right;
+        padding-right: 60px;
+    }
+
+    .help-block {
+        color: @tips-invalid
+    }
+
+    select.ng-valid, 
+    input.ng-valid {
+        border-left: 5px solid @tips-valid;
+    }
+
+    select.ng-invalid, 
+    input.ng-invalid {
+        border-left: 5px solid @tips-invalid;
+    }
+
+}

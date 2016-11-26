@@ -1,0 +1,58 @@
+<div class="my-body">
+    <div class="top">
+        <div class="user-container">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-mind_map"></use>
+            </svg>
+            <h3>DaSaB</h3>
+        </div>
+        <div class="search-container">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-approval"></use>
+            </svg>
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-ningmeng"></use>
+            </svg>
+            <input type="text" name="search" placeholder="search">
+        </div>
+        <div class="fun-container">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-businessman"></use>
+            </svg><span>1</span>
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-sms"></use>
+            </svg><span>12</span>
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-view_details"></use>
+            </svg><span>6</span>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="select-bar">
+        <div class="block">
+            <p class="title">商机网</p>
+                <ul>
+                    <li><a routerLink="/opportunity" routerLinkActive="active" >
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-demoltion"></use>
+                        </svg>商机</a></li>
+                    <li><a>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-circuit"></use>
+                        </svg>发现</a></li>
+                    <li><a><svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-flower"></use>
+                        </svg>商圈</a></li>
+                    <li><a><svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-sports_mode"></use>
+                        </svg>牛人教</a></li>
+                </ul>
+        </div>
+        </div>
+        <div class="show-area">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+
+</div>

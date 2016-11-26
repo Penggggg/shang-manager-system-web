@@ -1,0 +1,116 @@
+@top-height: 40px;
+
+.container-mixin( ) {
+    display: flex;
+    align-items: center;
+}
+
+.font-mixin( ) {
+    color: #fff;
+}
+
+.my-body {
+    position: relative;
+
+    .top {
+        position: fixed;
+        top: 0; left: 0;
+        height: @top-height ;width: 100%;
+        background: -webkit-linear-gradient( left, rgba(45,53,73,1),rgba(45,53,73,1), rgba(76,109,162,1),rgba(76,109,162,1),rgba(45,53,73,1) );
+        box-sizing: border-box;
+        display: flex;
+        border-bottom: 1px solid #ccc;
+
+        .user-container {
+            .container-mixin;
+            flex: 1;
+            padding-left: 15px;
+
+            h3{
+                display: inline;
+                .font-mixin;
+                margin: 0; 
+                font-size: 20px;
+            }
+
+        }
+
+        .search-container {
+            .container-mixin;
+            flex: 2;
+
+            .icon {
+                font-size: 26px;
+            }
+
+        }
+
+        .fun-container {
+            .container-mixin;
+            flex: 1;
+
+            span {
+                .font-mixin;
+            }
+        }
+
+    }
+
+    .content {
+        padding-top: @top-height;
+        min-height: 650px;
+        display: flex;
+
+        .select-bar {
+            width: 180px;
+            background-color: rgba(45,53,73,1);
+            padding: 15px 10px;
+
+            .block {
+                width: 100%;
+                margin-bottom: 15px;
+                border-bottom: 1px solid rgb(204,204,204);
+
+                .title {
+                    color: rgb(236, 236, 236);
+                }
+
+                ul {
+                    li {
+                        a {
+                            display: flex;
+                            align-items: center;
+                            width: 100%;
+                            text-align: center;
+                            padding: 15px 15px 15px 25px;
+                            color: #fff;
+                            border-radius: 8px;
+                            margin-bottom: 5px;
+
+                            .icon {
+                                margin-right: 10px;
+                            }
+                        }
+
+                        a.active,
+                        a.active:hover {
+                            background: -webkit-linear-gradient(left, rgb(25, 103, 147 ), rgb(25, 88, 127));
+                        }
+
+                        a:hover {
+                            background: -webkit-linear-gradient(left, rgba(25, 103, 147, 0.4 ), rgba(25, 88, 127, 0.4));                            
+                        }
+                    }
+                }
+            }
+        }
+
+        .show-area {
+            flex: 1;
+        }
+
+    }
+}
+
+
+
